@@ -9,9 +9,16 @@
 	position: fixed;
 	top: auto;
 	left: 200px;
+    height: 30px;
+    width: 30px;
+    color: blue;
 }
 .group{
 	margin-top: 20px;
     font-size: 20pt;
     font-family: monospace;
+    max-width: 207px;
+    max-height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
 }
