@@ -2,6 +2,13 @@
     color: yellow;
 }
 
+#mulai{
+    padding: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
 .judul-merah{
     color: red;
 }
@@ -14,11 +21,14 @@
     color: blue;
 }
 .group{
-	margin-top: 20px;
     font-size: 20pt;
     font-family: monospace;
     max-width: 207px;
     max-height: 40px;
     white-space: nowrap;
     overflow: hidden;
+}
+
+hr{
+    margin-top: 50px;
 }
