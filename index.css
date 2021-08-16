@@ -5,3 +5,11 @@
 .judul-merah{
     color: red;
 }
+.button{
+	position: fixed;
+	top: auto;
+	left: 200px;
+}
+.group{
+	margin-top: 20px;
+}
