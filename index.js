@@ -19,19 +19,20 @@ setTimeout(()=>{
 let i = 1;
 let j = 1;
 let k = 1;
+let temp=1;
 let strip = 2;
 let strip2 = 3;
 let strip3 = 1;
 
-const sekarang = document.getElementById('sekarang');
-sekarang.innerHTML = "Berapa Coy" ;
-
-const target = document.getElementById('target');
-let angkaTarget = (Math.floor(Math.random()*9)+1)*(Math.floor(Math.random()*9)+1);
-target.innerHTML = angkaTarget ;
-
 const belt = document.getElementById('belt');
 console.log(belt);
+setInterval(()=>{
+	const elemen=document.getElementsByTagName('span')
+	console.log(elemen[temp])
+	temp++;
+	
+},1000)
+
 setInterval(()=>{
     const span = document.createElement('span');
     if (i==strip){
@@ -43,6 +44,8 @@ setInterval(()=>{
         i++;
     }
     belt.appendChild(span);
+	belt.insertBefore(span,belt.childNodes[0]);
+
 },1000);
 
 const belt2 = document.getElementById('belt2');
@@ -58,6 +61,7 @@ setInterval(()=>{
         j++;
     }
     belt2.appendChild(span);
+    belt2.insertBefore(span,belt2.childNodes[0]);
 },1000);
 
 const belt3 = document.getElementById('belt3');
@@ -74,9 +78,8 @@ setInterval(()=>{
         k++;
     }
     belt3.appendChild(span);
-
+	belt3.insertBefore(span,belt3.childNodes[0]);
 },1000);
-
 
 function banyak(){
     strip = Math.floor(Math.random()*6)+2;
