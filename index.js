@@ -23,23 +23,58 @@ let temp=1;
 let strip = 2;
 let strip2 = 3;
 let strip3 = 1;
-
+let now=0; //[12]
+let score=0;
 
 const sekarang = document.getElementById('sekarang');
-sekarang.innerHTML = "Berapa Coy" ;
+function multiply(){
+	const multiplied_by =document.getElementsByClassName('span-belt')
+	let numb=multiplied_by[12].innerHTML
+	if (numb!='-'){
+		now=now*parseFloat(numb);
+		console.log(now);
+	}
+	sekarang.innerHTML=now;
+}
+function plus(){
+	const plus_by =document.getElementsByClassName('span-belt2')
+	let numb=plus_by[12].innerHTML
+	if (numb!='-'){
+		now=now+parseFloat(numb);
+		console.log(now);
+	}
+	sekarang.innerHTML=now;
+}
+function minus(){
+	const minus_by =document.getElementsByClassName('span-belt3')
+	let numb=parseInt(minus_by[12].innerHTML)
+	if (numb!='-'){
+		now=now-parseFloat(numb);
+		console.log(now);
+	}
+	sekarang.innerHTML=now;
+}
 
 const target = document.getElementById('target');
 let angkaTarget = (Math.floor(Math.random()*9)+1)*(Math.floor(Math.random()*9)+1);
 target.innerHTML = angkaTarget ;
+setInterval(()=>{
+	if(now==angkaTarget){
+		score++;
+		const total=document.getElementById('total');
+		total.innerHTML = score ;
+		angkaTarget = (Math.floor(Math.random()*9)+1)*(Math.floor(Math.random()*9)+1);
+		target.innerHTML = angkaTarget;
+	}
+},1000)
+
 
 
 const belt = document.getElementById('belt');
 console.log(belt);
 setInterval(()=>{
 	const elemen=document.getElementsByTagName('span')
-	console.log(elemen[temp])
 	temp++;
-	
 },1000)
 
 setInterval(()=>{
@@ -53,8 +88,9 @@ setInterval(()=>{
         i++;
     }
     belt.appendChild(span);
+    span.classList.add('span-belt')
 	belt.insertBefore(span,belt.childNodes[0]);
-
+	
 },1000);
 
 const belt2 = document.getElementById('belt2');
@@ -70,6 +106,7 @@ setInterval(()=>{
         j++;
     }
     belt2.appendChild(span);
+	span.classList.add('span-belt2')
     belt2.insertBefore(span,belt2.childNodes[0]);
 },1000);
 
@@ -87,6 +124,7 @@ setInterval(()=>{
         k++;
     }
     belt3.appendChild(span);
+	span.classList.add('span-belt3')
 	belt3.insertBefore(span,belt3.childNodes[0]);
 },1000);
 
