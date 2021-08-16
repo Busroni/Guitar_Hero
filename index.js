@@ -23,6 +23,13 @@ let strip = 2;
 let strip2 = 3;
 let strip3 = 1;
 
+const sekarang = document.getElementById('sekarang');
+sekarang.innerHTML = "Berapa Coy" ;
+
+const target = document.getElementById('target');
+let angkaTarget = (Math.floor(Math.random()*9)+1)*(Math.floor(Math.random()*9)+1);
+target.innerHTML = angkaTarget ;
+
 const belt = document.getElementById('belt');
 console.log(belt);
 setInterval(()=>{
