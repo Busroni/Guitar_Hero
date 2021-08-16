@@ -72,16 +72,16 @@ setInterval(()=>{
 
 
 function banyak(){
-    strip = Math.floor(Math.random()*7)+1;
+    strip = Math.floor(Math.random()*6)+2;
     return strip;
 }
 
 function banyak2(){
-    strip2 = Math.floor(Math.random()*7)+1;
+    strip2 = Math.floor(Math.random()*6)+2;
     return strip2;
 }
 
 function banyak3(){
-    strip3 = Math.floor(Math.random()*7)+1;
+    strip3 = Math.floor(Math.random()*6)+2;
     return strip3;
 }
